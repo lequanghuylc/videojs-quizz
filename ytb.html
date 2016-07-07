@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset=utf-8 />
+<link href="css/video-js.5.8.min.css" rel="stylesheet">
+<link href="css/style.css" rel="stylesheet" type="text/css">
+<script src="https://code.jquery.com/jquery-3.0.0.js"></script>
+<script src="js/video-js.5.8.min.js"></script>
+<script src="js/videojs-youtube.js"></script>
+<script src="js/video.func.js"></script>    
+<script src="js/urlvar.js"></script>
+</head>
+<body>
+    <div id="videohotkey">
+        <p><b>Enter</b>: Fullscreen | <b>Space</b>: Play/Pause | <b>Arrow keys</b>: Jump & Volume<br>
+        <b>Q</b>: Open Quizz | <b>M</b>: Mutez</p>
+    </div>
+    <div id="popup">
+        <h3>Quizz</h3>
+        <div class="quizz-content">
+           
+        </div>
+        <div class="quizz-control quizz-middle">
+            <div class="quizz-close quizz-center"><span class="vjs-icon-cancel z150"></span>  Return
+            </div>
+            <div class="quizz-submit quizz-center">
+            Your Answers <span class="vjs-icon-circle-outline z150"></span> <span id="quizz-score">0</span>/<span id="quizz-all">0</span>
+            </div>
+            <div class="quizz-again quizz-center"><span class="vjs-icon-replay z150"></span>  Again
+            </div>
+            <div class="quizz-fullscreen quizz-center">
+                <span class="vjs-icon-fullscreen-enter z150"></span> Fullscreen</div>
+            
+        </div>   
+    </div>
+  
+<script>
+    var quizzlink = getQueryVariable("q") == false ? "noquizz.html" : getQueryVariable("q");
+    var youtubeID = getQueryVariable("v");
+    var timeToPopup = getQueryVariable("t") == false ? 999999 : getQueryVariable("t");
+    var x ="<video id=\"my_video_1\" class=\"video-js vjs-default-skin vjs-big-play-centered\" controls preload=\"auto\" data-setup='{\"techOrder\": [\"youtube\"], \"sources\": [{ \"type\": \"video/youtube\", \"src\": \"https://www.youtube.com/watch?v=" + youtubeID + "\"}]}'></video>    ";
+      $("body").append(x);
+</script>
+</body>
+</html>

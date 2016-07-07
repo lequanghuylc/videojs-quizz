@@ -1,0 +1,143 @@
+html, body {
+    margin: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+.video-js {
+    position: relative !important;
+    width: 100% !important;
+    height: 100% !important;
+}
+
+.vjs-poster {
+    position: absolute !important;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+}
+#videohotkey{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 10;
+    text-align: center;
+    opacity: 0.5;
+    color: #fff;
+    background-color: #1F242E;
+    display:none;
+    margin-top:0px;
+}
+#videohotkey p {
+    margin-top:4px;
+    margin-bottom:4px;
+}
+#popup {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1000;
+    background-color: #0BD;
+    text-align: center;
+    display: none;
+    color: #fff;
+}
+
+.quizz-content {
+    width: 80%;
+    margin: auto;
+    height: 70%;
+    border-radius: 4px;
+    border: 2px dashed #fff;
+    overflow-x: hidden;
+    overflow-y: auto;
+}
+
+.z150 {
+    font-size: 1.5em;
+    margin-left: 4px;
+    margin-right: 4px;
+}
+
+.quizz-control {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 35px;
+    background-color: #f52;
+    opacity: 0.9;
+}
+
+.quizz-middle {
+    display: flex;
+    align-items: center;
+}
+
+.quizz-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.quizz-fullscreen,
+.quizz-close {
+    width: 20%;
+    height: 100%;
+    margin: 0;
+}
+
+.quizz-submit, .quizz-again {
+    width: 30%;
+    height: 100%;
+    margin: 0;
+}
+
+.quizz-fullscreen:hover,
+.quizz-close:hover,
+.quizz-submit:hover,.quizz-again:hover {
+    background-color: #C4411A;
+    cursor: pointer;
+}
+.quizz-choice{
+    display:block;
+    width:80%;
+    margin:auto;
+    outline:1px dotted #f52;
+    border:none;
+    margin-bottom: 10px;
+    height:30px;
+    border-radius: 4px;
+    background-color: lightgreen;
+    font-weight: bold;
+    padding-left: 15px;
+}
+.quizz-choice:hover{
+    cursor:pointer;
+}
+.quizz-choice:disabled{
+    background-color: gainsboro;
+}
+.quizz-choice.wrongchose {
+    background-color: lightcoral;
+}
+.quizz-choice.rightchose {
+    background-color: lightgreen;
+}
+.quizz-choice.rightchose::before{
+    content: "(✓) ";
+}
+.quizz-choice.wrongchose::before{
+    content: "(X) ";
+}
+.quizz-question{
+    margin-bottom:20px;
+    padding:10px;
+}
+.quizz-question:hover{
+    background-color: dodgerblue;
+}
